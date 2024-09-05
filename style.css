@@ -1,0 +1,112 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 30px;
+  font-family: 'MyFont';
+}
+
+@font-face {
+  font-family: 'MyFont';
+  src: url(Roboto/Roboto-Regular.ttf);
+  font-weight: normal; /* or bold, etc. */
+  font-style: normal;  /* or italic, oblique, etc. */
+}
+
+
+.container {
+    display: inline-grid;
+    grid-template: repeat(5, 20vh) / repeat(5, 20vw);
+    background-color: lightblue; 
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .room {
+    border: 1px solid;
+    font-size: 50%;
+    text-align: center;
+  }
+  
+
+  
+  #main-content {
+    grid-column: 2 / 6;
+    grid-row: 2 / 6;
+  }
+  
+  /* DASHBOARD */
+  #dashboard{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 6;
+    background-color: rgb(25,146,212);
+    color: white;
+    font-weight: 1000;
+    padding: 20px;
+  }
+
+  #dashboard-header{
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+
+  .dashboard-container{
+    display: grid;
+    grid-template: repeat(11, 40px) / repeat(2, 60px);
+    align-items: center;
+    justify-content: left;
+  }
+
+  .dashboard-item{
+    text-align: left;
+  }
+  
+
+  /* HEADER */
+ 
+  #header {
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: white;
+    padding: 10px;
+  }
+
+  .header-container{
+    display: grid;
+    grid-template: 40px 60px / 50px 50px 150px 100px 100px 100px 100px 120px 50px 150px ;
+    
+  }
+
+  .header-item{
+    border: 1px solid black;
+  }
+
+  #search-bar{
+    grid-column-start: 2;
+    grid-column-end: 8; 
+  }
+
+  #bar{
+    width: 500px;
+    background-color: lightgray;
+    border: none;
+    border-radius: 10px;
+  }
+
+  #greeting{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    text-align: left;
+    font-weight: bold;
+    line-height: 30px;
+  }
+
+  #name{
+    font-size: 20px;
+  }
